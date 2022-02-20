@@ -29,7 +29,7 @@ config.functions.anti_invite.roles_permission       => Lista de ID's dos cargos 
 
 config.functions.autor_role.role_id                 => ID do cargo que será adicionado
 
-config.functions.twitch_notify.twitch_client_id     => Client Secret da aplicação da Twitch.tv 
+config.functions.twitch_notify.twitch_client_id     => Client ID da aplicação da Twitch.tv 
 config.functions.twitch_notify.twitch_client_secret => Client Secret da aplicação da Twitch.tv 
 config.functions.twitch_notify.channel_notify       => ID do canal que será notificado
 config.functions.twitch_notify.twitch_channels      => Lista de canais que serão notificados
