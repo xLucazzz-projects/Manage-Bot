@@ -32,8 +32,7 @@ config.functions.log_events.channel_id              => ID do canal que serão en
 ### Autor
 ---
 
-<a href="https://twitter.com/xLucazzzOficial/">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69597508?s=400&u=9805bbc1827c56e2b42a14e702e4d6b2c03f4141" width="100px;" alt=""/>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69597508?s=400&u=9805bbc1827c56e2b42a14e702e4d6b2c03f4141" width="100px;" alt=""/>
 
 Feito com ❤️ por xLucazzz
 
