@@ -18,6 +18,11 @@ async function startCMHandler(client) {
             console.log(colors.red('-> ') + ('O comando ' + colors.green(f) + ' foi carregado com sucesso.'))
             if (err) console.log(colors.red('-> ') + 'O comando ' + colors.red(f) + ' não foi carregado com sucesso.')
 
+            if (client.command_list) {
+                client.command_list = client.command_list + "> `" + pull.config.name + "` -> `" + pull.config.description + "`\n"
+            } else {
+                client.command_list = "> `" + pull.config.name + "` -> `" + pull.config.description + "`\n"
+            }
             pull.config.aliases.forEach(alias => {
                 client.aliases.set(alias, pull.config.name)
             });
