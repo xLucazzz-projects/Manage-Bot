@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "axios": "^0.26.0",
+    "colors": "^1.4.0",
+    "discord-buttons": "^4.0.0-deprecated",
+    "discord.js": "^13.6.0",
+    "lowdb": "^1.0.0"
+  },
+  "name": "managebot",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

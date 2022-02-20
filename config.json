@@ -1,0 +1,43 @@
+{
+  "bot": {
+    "token": "",
+    "prefix": "!"
+  },
+  "functions": {
+    "join-leave-message": {
+      "config_name": "JOIN-LEAVE-MESSAGE",
+      "enabled": true,
+      "join_channel": "",
+      "leave_channel": ""
+    },
+    "anti_invite": {
+      "config_name": "ANTI INVITE",
+      "enabled": true,
+      "roles_permission": [
+        ""
+      ]
+    },
+    "auto_role": {
+      "config_name": "AUTO-ROLE",
+      "enabled": true,
+      "role_id": ""
+    },
+    "twitch_notify": {
+      "config_name": "TWITCH STREAM",
+      "enabled": true,
+      "twitch_client_id": "",
+      "twitch_client_secret": "",
+      "channel_notify": "",
+      "twitch_channels": [
+        "xlucazzz___",
+        "blxckoutz"
+      ]
+    },
+
+    "log_events": {
+      "config_name": "CHANNEL LOGS",
+      "enabled": true,
+      "channel_id": ""
+    }
+  }
+}
