@@ -1,6 +1,6 @@
 # Manage Bot
 
-Um bot de Discord simples feito utilizando <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
 
 ## Funções
 
@@ -37,14 +37,4 @@ config.functions.twitch_notify.twitch_channels      => Lista de canais que serã
 config.functions.log_events.channel_id              => ID do canal que serão enviadas as Logs
 ```
 
-### Autor
----
-
-<a href="https://twitter.com/xLucazzzOficial/">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69597508?s=400&u=9805bbc1827c56e2b42a14e702e4d6b2c03f4141" width="100px;" alt=""/>
- <br />
- <sub><b>xLucazzz</b></sub></a> <a href="https://twitter.com/xLucazzzOficial/" title="Twitter">🐦</a>
-
-
-Feito com ❤️ por xLucazzz
-
+<center>Feito com ❤️ por xLucazzz</center>
