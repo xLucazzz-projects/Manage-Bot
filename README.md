@@ -1,6 +1,14 @@
 # Manage Bot
 
-<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" href="https://nodejs.org/en/download/"/>
+Um bot de Discord simples feito utilizando <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+
+## Funções
+
+- Auto-Role
+- Anti-Invite
+- Twitch Live Stream Notify
+- Audit Logs
+- Manage Commands
 
 ## Instalação
 
@@ -32,7 +40,11 @@ config.functions.log_events.channel_id              => ID do canal que serão en
 ### Autor
 ---
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69597508?s=400&u=9805bbc1827c56e2b42a14e702e4d6b2c03f4141" width="100px;" alt=""/>
+<a href="https://twitter.com/xLucazzzOficial/">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69597508?s=400&u=9805bbc1827c56e2b42a14e702e4d6b2c03f4141" width="100px;" alt=""/>
+ <br />
+ <sub><b>xLucazzz</b></sub></a> <a href="https://twitter.com/xLucazzzOficial/" title="Twitter">🐦</a>
+
 
 Feito com ❤️ por xLucazzz
 
