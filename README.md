@@ -1,6 +1,6 @@
 # Manage Bot
 
-Um bot de Discord simples feito utilizando <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+Um bot de Discord simples feito utilizando <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" href="https://nodejs.org/en/download/"/>
 
 ## Instalação
 
