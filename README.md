@@ -24,6 +24,9 @@ config.bot.prefix                                   => Prefixo utilizado nos com
 
 config.functions.commands.channel                   => ID do canal que os comandos serão executados (utilize `null` para não utilizar um canal específico)
 
+config.functions.rich_presence.update_cooldown      => Cooldown em MS para a atualização do Status
+config.functions.rich_presence.status               => Lista de Status
+
 config.functions.join-leave-message.join_channel    => ID do canal que serão enviadas as Logs de Entrada
 config.functions.join-leave-message.leave_channel   => ID do canal que serão enviadas as Logs de Saída
 
