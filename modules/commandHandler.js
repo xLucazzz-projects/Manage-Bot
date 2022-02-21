@@ -1,6 +1,7 @@
 const fs = require('fs')
 const Discord = require('discord.js')
 const colors = require('colors')
+const config = require('../config.json')
 
 async function startCMHandler(client) {
     client.commands = new Discord.Collection();
@@ -19,9 +20,9 @@ async function startCMHandler(client) {
             if (err) console.log(colors.red('-> ') + 'O comando ' + colors.red(f) + ' não foi carregado com sucesso.')
 
             if (client.command_list) {
-                client.command_list = client.command_list + "> `" + pull.config.name + "` -> `" + pull.config.description + "`\n"
+                client.command_list = client.command_list + "> `" + config.bot.prefix + pull.config.name + "` -> `" + pull.config.description + "`\n"
             } else {
-                client.command_list = "> `" + pull.config.name + "` -> `" + pull.config.description + "`\n"
+                client.command_list = "> `" + config.bot.prefix + pull.config.name + "` -> `" + pull.config.description + "`\n"
             }
             pull.config.aliases.forEach(alias => {
                 client.aliases.set(alias, pull.config.name)
