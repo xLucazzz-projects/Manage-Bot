@@ -23,7 +23,7 @@ module.exports = async (client, message) => {
                     .setColor("RED")
                     .setDescription("❌ | Você não pode enviar convites de outros servidores de discord !")
 
-                return message.channel.send({content: `${message.author}`,embeds: [embed]}).then(async msg => setTimeout(() => {msg.delete().catch(async err => console.error)}, 10000))
+                return message.channel.send({ content: `${message.author}`, embeds: [embed] }).then(async msg => setTimeout(() => { msg.delete().catch(async err => console.error) }, 10000))
             }
         }
     }
@@ -35,6 +35,15 @@ module.exports = async (client, message) => {
 
     let archive = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
 
+    if (config.functions.commands.channel !== null && message.channel.id !== config.functions.commands.channel) {
+        var embed = new Discord.MessageEmbed()
+
+            .setColor("RED")
+            .setDescription(`❌ | Você deve utilizar os comandos no canal <#${config.functions.commands.channel}>.`)
+
+        return message.channel.send({ content: `${message.author}`, embeds: [embed] }).then(async msg => setTimeout(() => { msg.delete().catch(async err => console.error) }, 10000))
+    }
+
     if (archive) {
         archive.run(client, message, args, prefix)
     } else {
@@ -43,6 +52,6 @@ module.exports = async (client, message) => {
             .setColor("RED")
             .setDescription(`❌ | O comando executado não existe.`)
 
-        return message.channel.send({ content: `${message.author}`, embeds: [embed] }).then(async msg => setTimeout(() => {msg.delete().catch(async err => console.error)}, 10000))
+        return message.channel.send({ content: `${message.author}`, embeds: [embed] }).then(async msg => setTimeout(() => { msg.delete().catch(async err => console.error) }, 10000))
     }
 }

@@ -4,6 +4,9 @@
     "prefix": "!"
   },
   "functions": {
+    "commands": {
+      "channel": null
+    },
     "join-leave-message": {
       "config_name": "JOIN-LEAVE-MESSAGE",
       "enabled": true,
