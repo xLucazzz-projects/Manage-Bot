@@ -9,6 +9,9 @@
 - Twitch Live Stream Notify
 - Audit Logs
 - Manage Commands
+- Random Status
+- Command Handler
+- Event Handler
 
 ## Instalação
 
