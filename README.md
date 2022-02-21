@@ -22,6 +22,8 @@ npm install
 config.bot.token                                    => Token de Autenticação do Bot
 config.bot.prefix                                   => Prefixo utilizado nos comandos
 
+config.functions.commands.channel                   => ID do canal que os comandos serão executados (utilize `null` para não utilizar um canal específico)
+
 config.functions.join-leave-message.join_channel    => ID do canal que serão enviadas as Logs de Entrada
 config.functions.join-leave-message.leave_channel   => ID do canal que serão enviadas as Logs de Saída
 

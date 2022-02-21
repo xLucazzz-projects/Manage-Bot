@@ -35,7 +35,7 @@ module.exports = async (client, message) => {
 
     let archive = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
 
-    if (config.functions.commands.channel !== null && message.channel.id !== config.functions.commands.channel) {
+    if (config.functions.commands.channel !== null && message.channel.id !== config.functions.commands.channel && !message.member.permissions.has("ADMINISTRATOR")) {
         var embed = new Discord.MessageEmbed()
 
             .setColor("RED")
