@@ -7,5 +7,4 @@ const { startEVHandler } = require('./modules/eventHandler')
 startCMHandler(client)
 startEVHandler(client)
 
-
 client.login(config.bot.token)

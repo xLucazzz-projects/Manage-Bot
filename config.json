@@ -5,7 +5,14 @@
   },
   "functions": {
     "commands": {
+      "config_name": "COMMANDS CHANNEL",
       "channel": null
+    },
+    "rich_presence": {
+      "config_name": "RANDOM STATUS",
+      "enabled": true,
+      "update_cooldown": 15000,
+      "status": [{"name": "Playing Status","type": "PLAYING"}, {"name": "Watching Status","type": "WATCHING"}, {"name": "Listening Status","type": "LISTENING"}]
     },
     "join-leave-message": {
       "config_name": "JOIN-LEAVE-MESSAGE",
@@ -36,7 +43,6 @@
         "blxckoutz"
       ]
     },
-
     "log_events": {
       "config_name": "CHANNEL LOGS",
       "enabled": true,

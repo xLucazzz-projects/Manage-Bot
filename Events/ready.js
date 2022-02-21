@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const colors = require('colors')
 const config = require('../config.json')
 const { twitchModuleStarter } = require('../modules/twichModule')
+const { richPresenceModuleStarter } = require('../modules/richPresence')
 
 module.exports = async client => {
     console.log(`\n[BOT] `.green + `Iniciado com sucesso.`)
@@ -11,5 +12,9 @@ module.exports = async client => {
 
     if (config.functions.twitch_notify.enabled === true) {
         twitchModuleStarter(client)
+    }
+
+    if (config.functions.rich_presence.enabled === true) {
+        richPresenceModuleStarter(client)
     }
 }
