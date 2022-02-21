@@ -35,7 +35,7 @@ config.functions.join-leave-message.leave_channel   => ID do canal que serão en
 
 config.functions.anti_invite.roles_permission       => Lista de ID's dos cargos autorizados
 
-config.functions.autor_role.role_id                 => ID do cargo que será adicionado
+config.functions.auto_role.role_id                  => ID do cargo que será adicionado
 
 config.functions.twitch_notify.twitch_client_id     => Client ID da aplicação da Twitch.tv 
 config.functions.twitch_notify.twitch_client_secret => Client Secret da aplicação da Twitch.tv 
