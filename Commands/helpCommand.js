@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args, prefix, cmd) => {
     var embed = new Discord.MessageEmbed()
 
-        .setColor("AQUA")
+        .setColor("RANDOM")
         .setDescription(`**Lista de Comandos**\n\n${client.command_list}`)
 
     return message.channel.send({ embeds: [embed] })
