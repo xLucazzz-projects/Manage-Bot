@@ -28,10 +28,25 @@ module.exports.run = async (client, message, args, prefix, cmd) => {
             { name: `💼 Cargos (${message.member.roles.cache.size})`, value: message.member.roles.cache.map(r => "`" + r.name + "`,").join(" ").replace(", `@everyone`,", "").replace("`@everyone`,", "`@everyone`"), inline: false },
             { name: `🛡 Permissões (${message.member.permissions.toArray().length})`, value: permissions, inline: false }
         ]
+
+        await sendMessage()
+
     }
 
 
     if (message.mentions.members.first()) {
+        if (!client.guilds.cache.get(message.guild.id).members.cache.get(message.mentions.members.first().id)) {
+            var embed = new Discord.MessageEmbed()
+
+                .setColor("RED")
+                .setDescription(`❌ | Não encontrei o usuário informado`)
+
+            return message.channel.send({
+                content: `${message.author}`,
+                embeds: [embed]
+            })
+        }
+
         var permissions = ""
 
         await message.mentions.members.first().permissions.toArray().map(r => permissions += "`" + r + "`,")
@@ -49,41 +64,45 @@ module.exports.run = async (client, message, args, prefix, cmd) => {
             { name: `💼 Cargos (${message.mentions.members.first().roles.cache.size})`, value: message.mentions.members.first().roles.cache.map(r => "`" + r.name + "`,").join(" ").replace(", `@everyone`,", "").replace("`@everyone`,", "`@everyone`"), inline: true },
             { name: `🛡 Permissões (${message.mentions.members.first().permissions.toArray().length})`, value: permissions, inline: false }
         ]
+
+        await sendMessage()
     }
 
 
-    return message.channel.send({ embeds: [embed] }).then(async msg => {
-        await msg.react("▶️")
-        const filter = (reaction, user) => {
-            return user.id === message.author.id;
-        };
-        const collector = msg.createReactionCollector({ filter, time: 120000 });
+    async function sendMessage() {
+        return message.channel.send({ embeds: [embed] }).then(async msg => {
+            await msg.react("▶️")
+            const filter = (reaction, user) => {
+                return user.id === message.author.id;
+            };
+            const collector = msg.createReactionCollector({ filter, time: 120000 });
 
-        var page = 0
+            var page = 0
 
-        collector.on("collect", async collected => {
-            if (page === 0) {
-                page = 1
-                await clearReactions(msg)
-                embed.fields = fields2
-                msg.edit({
-                    embeds: [embed]
-                })
-                await msg.react("◀️")
+            collector.on("collect", async collected => {
+                if (page === 0) {
+                    page = 1
+                    await clearReactions(msg)
+                    embed.fields = fields2
+                    msg.edit({
+                        embeds: [embed]
+                    })
+                    await msg.react("◀️")
 
-            } else {
-                page = 0
-                await clearReactions(msg)
+                } else {
+                    page = 0
+                    await clearReactions(msg)
 
-                embed.fields = fields1
-                msg.edit({
-                    embeds: [embed]
-                })
-                await msg.react("▶️")
+                    embed.fields = fields1
+                    msg.edit({
+                        embeds: [embed]
+                    })
+                    await msg.react("▶️")
 
-            }
+                }
+            })
         })
-    })
+    }
 }
 
 async function clearReactions(msg) {
