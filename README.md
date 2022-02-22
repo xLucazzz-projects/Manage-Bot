@@ -12,6 +12,7 @@
 - Random Status
 - Command Handler
 - Event Handler
+- Members Counter
 
 ## Instalação
 
@@ -26,6 +27,8 @@ config.bot.token                                    => Token de Autenticação d
 config.bot.prefix                                   => Prefixo utilizado nos comandos
 
 config.functions.commands.channel                   => ID do canal que os comandos serão executados (utilize `null` para não utilizar um canal específico)
+
+config.functions.members_count.channel_id           => ID do canal que será atualizado a quantidade de membros
 
 config.functions.rich_presence.update_cooldown      => Cooldown em MS para a atualização do Status
 config.functions.rich_presence.status               => Lista de Status

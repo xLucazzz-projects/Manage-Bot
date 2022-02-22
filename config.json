@@ -8,6 +8,10 @@
       "config_name": "COMMANDS CHANNEL",
       "channel": null
     },
+    "members_count": {
+      "enabled": true,
+      "channel_id": ""
+    },
     "rich_presence": {
       "config_name": "RANDOM STATUS",
       "enabled": true,

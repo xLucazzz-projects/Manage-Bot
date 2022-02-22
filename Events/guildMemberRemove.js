@@ -34,7 +34,20 @@ module.exports = async (client, member) => {
 
     }
 
+    if (config.functions.members_count.enabled === true) {
+        var channel = await client.channels.cache.get(config.functions.members_count.channel_id)
 
+        if (channel) {
+            if (channel.type !== "GUILD_VOICE") {
+                return console.log(`[${config.functions.members_count.config_name}]`.red + ` O canal deve ser do tipo VOZ. `)
+            }
 
+            await channel.setName(`👥 Membros: ${member.guild.members.cache.size}`).catch(async err => {
+                console.log(`[${config.functions.members_count.config_name}]`.red + ` Ocorreu um erro ao trocar o nome do canal. Err: ${err}`)
+            })
+        } else {
+            console.log(`[${config.functions.members_count.config_name}]`.red + ` Ocorreu um erro ao encontrar o canal informado. `)
+        }
+    }
 
 }
