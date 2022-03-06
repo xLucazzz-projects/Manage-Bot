@@ -22,30 +22,30 @@ npm install
 
 ## Configurações
 
-```
-config.bot.token                                    => Token de Autenticação do Bot
-config.bot.prefix                                   => Prefixo utilizado nos comandos
-
-config.functions.commands.channel                   => ID do canal que os comandos serão executados (utilize `null` para não utilizar um canal específico)
-
-config.functions.members_count.channel_id           => ID do canal que será atualizado a quantidade de membros
-
-config.functions.rich_presence.update_cooldown      => Cooldown em MS para a atualização do Status
-config.functions.rich_presence.status               => Lista de Status
-
-config.functions.join-leave-message.join_channel    => ID do canal que serão enviadas as Logs de Entrada
-config.functions.join-leave-message.leave_channel   => ID do canal que serão enviadas as Logs de Saída
-
-config.functions.anti_invite.roles_permission       => Lista de ID's dos cargos autorizados
-
-config.functions.auto_role.role_id                  => ID do cargo que será adicionado
-
-config.functions.twitch_notify.twitch_client_id     => Client ID da aplicação da Twitch.tv 
-config.functions.twitch_notify.twitch_client_secret => Client Secret da aplicação da Twitch.tv 
-config.functions.twitch_notify.channel_notify       => ID do canal que será notificado
-config.functions.twitch_notify.twitch_channels      => Lista de canais que serão notificados
-
-config.functions.log_events.channel_id              => ID do canal que serão enviadas as Logs
-```
+- `bot`
+  - `token`: Your Steam account name
+  - `prefix`: Your Steam password
+- `functions`
+  - `commands`
+    - `channel`: ID do canal que os comandos serão executados (utilize `null` para não utilizar um canal específico)
+  - `members_count`
+    - `channel_id`: ID do canal que será atualizado a quantidade de membros
+  - `rich_presence`
+    - `update_cooldown`: Cooldown em MS para a atualização do Status
+    - `status`: Lista de Status
+  - `join-leave`
+    - `join_channel`: ID do canal que serão enviadas as Logs de Entrada
+    - `leave_channel`: ID do canal que serão enviadas as Logs de Saída
+  - `anti_invite`
+    - `roles_permission`: Lista de ID's dos cargos autorizados
+  - `auto_role`
+    - `role_id`: ID do cargo que será adicionado
+  - `twitch_notify`
+    - `twitch_client_id`: Client ID da aplicação da Twitch.tv 
+    - `twitch_client_secret`: Client Secret da aplicação da Twitch.tv 
+    - `channel_notify`: ID do canal que será notificado
+    - `twitch_channels`: Lista de canais que serão notificados
+  - `log_events`
+    - `channel_id`: ID do canal que serão enviadas as Logs
 
 <center>Feito com ❤️ por xLucazzz</center>
