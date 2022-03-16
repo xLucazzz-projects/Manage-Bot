@@ -23,8 +23,8 @@ npm install
 ## Configurações
 
 - `bot`
-  - `token`: Your Steam account name
-  - `prefix`: Your Steam password
+  - `token`: Token de autenticação do Bot
+  - `prefix`: Prefixo dos comandos
 - `functions`
   - `commands`
     - `channel`: ID do canal que os comandos serão executados (utilize `null` para não utilizar um canal específico)
